@@ -1,0 +1,92 @@
+body {
+    background: rgba(175, 175, 175, 0.3) url(background.jpeg) no-repeat center center / cover;
+    background-blend-mode: darken;
+    font-family: "Poppins", sans-serif;
+    color: black;
+}
+
+select {
+    width: 13.5em;
+}
+
+
+/*Header*/
+* {
+    font-family: "Trebuchet MS", monospace;
+}
+
+.topTable {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 0em;
+}
+
+.topper td {
+    text-align: center;
+}
+
+.logoColumn {
+    width: 20%;
+}
+
+.titleColumn {
+    text-align: center;
+}
+
+.dateColumn {
+    width: 20%;
+    text-align: right;
+}
+
+/*form instructions*/
+.topPart {
+    text-align: center;
+}
+
+/*patient form*/
+.patientForm {
+    min-width: 30em;
+    width: fit-content;
+    margin: auto;
+    background-color: rgb(166, 255, 185);
+    border-radius: 1em;
+    padding: 2em;
+    box-shadow: 0 0 5px 0 rgba(71, 71, 71, 0.5);
+    margin-bottom: 5em;
+}
+
+/*name*/
+.nameField {
+    display: inline-block;
+    white-space: nowrap;
+    justify-content: space-between;
+}
+
+/*gender row*/
+.genderRow {
+display: inline-block;
+    white-space: nowrap;
+    justify-content: space-between;
+}
+
+.cityStateRow {
+    display: inline-block;
+    white-space: nowrap;
+    justify-content: space-between;
+}
+
+
+.endOfFormButtons {
+text-align: center;
+padding-top: 2em;
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.thankyousubmission {
+    text-align: center;
+    margin-bottom: 3em;
+}
