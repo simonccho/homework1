@@ -50,16 +50,16 @@
                 <td class="nameField">
                     <input type="text" id="firstName" name="First Name" size="20" minlength="1" maxlength="30"
                         pattern="^[a-zA-Z](?:[ '\-a-zA-Z]?[a-zA-Z])*$" title="Letters, apostrophes, and dashes only"
-                        placeholder="First name" <!--required-->
+                        placeholder="First name" required>
                 </td>
                 <td class="nameField">
                     <input type="text" id="middleInitial" name="Middle Initial" size="3" maxlength="1" pattern="[A-Z]"
-                        placeholder="M" title="One capital letter only">
+                        placeholder="MI" title="One capital letter only">
                 </td>
                 <td class="nameField">
                     <input type="text" id="lastName" name="Last Name" size="20" minlength="1" maxlength="30"
                         pattern="^[a-zA-Z](?:[ '\-a-zA-Z2-5]?[a-zA-Z2-5])*$"
-                        title="Letters, apostrophes, numbers 2-5, and dashes only" placeholder="Last name" <!--required-->
+                        title="Letters, apostrophes, numbers 2-5, and dashes only" placeholder="Last name" required>
                 </td>
             </tr>
 
@@ -68,29 +68,29 @@
                 <td>
                     <p class="genderLabel">Gender:</p>
                 </td>
-                <td class="genderRow">
+                <td class="genderCol">
                     <input type="radio" name="gender" id="male" value="Male">
-                    <label for="male">Male</label>
+                    <label class="rb" for="male">Male</label>
                 </td>
-                <td class="genderRow">
+                <td class="genderCol">
                     <input type="radio" name="gender" id="female" value="Female">
-                    <label for="female">Female</label>
+                    <label class="rb" for="female">Female</label>
                 </td>
-                <td class="genderRow">
+                <td class="genderCol">
                     <input type="radio" name="gender" id="other" value="Other">
-                    <label for="other">Other</label>
+                    <label class="rb" for="other">Other</label>
                 </td>
             </tr>
 
             <!--Email-->
             <tr>
                 <td>
-                    <label class="Email">Email:</label>
+                    <label class="Email" for="email">Email:</label>
                 </td>
                 <td>
-                    <input type="email" name="Email Address" size="51" maxlength="30"
+                    <input type="email" id="email" name="Email Address" size="51" maxlength="30"
                         pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Enter a valid email address"
-                        placeholder="Email address" <!--required-->
+                        placeholder="Email address" required>
                 </td>
             </tr>
 
@@ -100,32 +100,32 @@
                     <label class="UserID" for="userID">User ID:</label>
                 </td>
                 <td>
-                    <input type="text" name="User ID" size="51" maxlength="20" pattern="[A-Za-z]+[A-Za-z0-9-_]{8,}"
-                        placeholder="User ID" <!--required-->
+                    <input type="text" id="userID" name="User ID" size="51" maxlength="20"
+                        pattern="[A-Za-z]+[A-Za-z0-9-_]{8,}" placeholder="User ID" required>
                 </td>
             </tr>
 
             <!--password-->
             <tr>
                 <td>
-                    <label class="required" for="password">Password:</label>
+                    <label for="password">Password:</label>
                 </td>
                 <td>
-                    <input type="password" name="Password" size="51" maxlength="30"
-                       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    <input type="password" id="password" name="Password" size="51" maxlength="30"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                         title="Password must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters"
-                        placeholder="Password" <!--required-->
+                        placeholder="Password" required>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label class="required" for="passwordCheck">Confirm Password:</label>
+                    <label for="passwordCheck">Confirm Password:</label>
                 </td>
                 <td>
-                    <input type="password" name="Password Check" size="51" maxlength="30"
+                    <input type="password" id="passwordCheck" name="Password Check" size="51" maxlength="30"
                         placeholder="Re-enter password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                         title="Password must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters"
-                        <!--required-->
+                        required>
                 </td>
             </tr>
 
@@ -133,18 +133,18 @@
             <!--Address line 1-->
             <tr>
                 <td>
-                    <label class="required">Address Line 1:</label>
+                    <label>Address Line 1:</label>
                 </td>
                 <td>
                     <input type="text" id="addressLine1" name="Address Line 1" size="51" minlength="2" maxlength="30"
-                        title="At least 1 address line required" placeholder="Address line 1" <!--required-->
+                        title="At least 1 address line required" placeholder="Address line 1" required>
                 </td>
             </tr>
 
             <!--Address line 2-->
             <tr>
                 <td>
-                    <label class="required">Address Line 2:</label>
+                    <label>Address Line 2:</label>
                 </td>
                 <td>
                     <input type="text" id="addressLine2" name="Address Line 2" size="51" minlength="2" maxlength="30"
@@ -155,25 +155,33 @@
             <!--SSN-->
             <tr>
                 <td>
-                    <label class="SSN">SSN:</label>
+                    <label class="SSN" for="ssn">SSN:</label>
                 </td>
                 <td>
-                    <input type="tel" name="SSN" size="51" maxlength="11" pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}"
-                        title="Enter a valid SSN" placeholder="XXX-XX-XXXX" <!--required-->
+                    <input type="password" id="ssn" name="SSN" size="51" maxlength="11"
+                        pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}" title="Enter a valid SSN" placeholder="XXX-XX-XXXX"
+                        required>
                 </td>
             </tr>
 
-            <!--city, state, and zip code-->
+            <!--CITY-->
             <tr>
                 <td>
-                    <label class="citystate">City and State:</label>
+                    <label class="city" for="city">City:</label>
                 </td>
-                <td class="cityStateRow">
+                <td>
                     <input type="text" id="city" name="City" size="25" minlength="2" maxlength="30"
-                        title="City is required" placeholder="City" <!--required-->
+                        title="City is required" placeholder="City" required>
                 </td>
-                <td class="cityStateRow">
-                    <select id="state" name="State" title="State is required" <!--required-->
+            </tr>
+
+            <!--STATE-->
+            <tr>
+                <td>
+                    <label class="state" for="state">State:</label>
+                </td>
+                <td>
+                    <select id="state" name="State" title="State is required" required>
                         <!--list of states: https://www.freeformatter.com/usa-state-list-html-select.html#stateiso-->
                         <option value="" disabled selected>Choose State</option>
                         <option value="AL">Alabama</option>
@@ -234,64 +242,60 @@
             <!--ZIP code-->
             <tr>
                 <td>
-                    <label class="ZIP code">ZIP code:</label>
+                    <label class="ZIP code" for="zip">ZIP code:</label>
                 </td>
                 <td>
-                    <input type="tel" name="ZIP code" size="25" minlength="5" maxlength="10"
+                    <input type="tel" id="zip" name="ZIP code" size="25" minlength="5" maxlength="10"
                         pattern="^[0-9]{5}(?:-[0-9]{4})?$" title="5 Digit Zip/Postal Code is required"
-                        placeholder="XXXXX" <!--required-->
+                        placeholder="XXXXX" required>
                 </td>
             </tr>
             <!--text area-->
             <tr>
                 <td colspan="3">
-                    <ins for="textArea">Describe current health concern:</ins>
-                    <br>
-                    <textarea cols="71" rows="3" name="healthConcern" id="textArea" maxlength="256"></textarea>
+                    <p>Describe current health concern:</p>
+                    <textarea cols="71" rows="3" name="healthConcern" maxlength="256"></textarea>
                 </td>
             </tr>
             <!--prior visit question-->
             <tr>
                 <td colspan="3">
-                    <label class="firstVisit">Is this your first time visiting this clinic?</label>
-                    <br>
-                    <input type="radio" name="yesNo1" value="Yes">
-                    <label for="Yes">Yes</label>
-                    <input type="radio" name="yesNo1" value="No">
-                    <label for="No">No</label>
+                    <p>Is this your first time visiting this clinic?</p>
+                    <input type="radio" name="yesNo1" id="Yes1" value="Yes">
+                    <label class="rb" for="Yes1">Yes</label>
+                    <input type="radio" name="yesNo1" id="No1" value="No">
+                    <label class="rb" for="No1">No</label>
                 </td>
             </tr>
 
             <!--medication check-->
             <tr>
                 <td colspan="3">
-                    <label class="issue">Are you currently taking any prescribed medication?</label>
-                    <br>
-                    <input type="radio" name="yesNo2" value="Yes">
-                    <label for="Yes">Yes</label>
-                    <input type="radio" name="yesNo2" value="No">
-                    <label for="No">No</label>
+                    <p>Are you currently taking any prescribed medication?</p>
+                    <input type="radio" name="yesNo2" id="Yes2" value="Yes">
+                    <label class="rb" for="Yes2">Yes</label>
+                    <input type="radio" name="yesNo2" id="No2" value="No">
+                    <label class="rb" for="No2">No</label>
                 </td>
             </tr>
 
             <!--checkbox-->
             <tr>
                 <td colspan="3">
-                    <label class="clinicfind">How did you hear about Big Health Medical?:</label>
-                    <br>
-                    <input type="checkbox" name="checkbox1" value="Option 1">
+                    <p>How did you hear about Big Health Medical?:</p>
+                    <input type="checkbox" name="checkbox1" id="checkbox1" value="Option 1">
                     <label for="checkbox1">Insurance</label>
                     <br>
-                    <input type="checkbox" name="checkbox2" value="Option 2">
+                    <input type="checkbox" name="checkbox2" id="checkbox2" value="Option 2">
                     <label for="checkbox2">Family Member</label>
                     <br>
-                    <input type="checkbox" name="checkbox3" value="Option 3">
+                    <input type="checkbox" name="checkbox3" id="checkbox3" value="Option 3">
                     <label for="checkbox3">Friend</label>
                     <br>
-                    <input type="checkbox" name="checkbox4" value="Option 4">
+                    <input type="checkbox" name="checkbox4" id="checkbox4" value="Option 4">
                     <label for="checkbox4">Online Ad</label>
                     <br>
-                    <input type="checkbox" name="checkbox5" value="Option 5">
+                    <input type="checkbox" name="checkbox5" id="checkbox5" value="Option 5">
                     <label for="checkbox5">Other</label>
                     <br>
                 </td>
@@ -300,10 +304,12 @@
             <!--slider-->
             <tr class="sliderRow">
                 <td colspan="3">
-                    <ins><label for="daySlider">How long has the issue persisted?:</label></ins>
+                    <p>How long has the issue persisted?:</p>
                     1 Day
-                    <input type="range" min=1 max=100 step="1" class="slider" name="dayquantity">
+                    <input type="range" min=1 max=100 step="1" class="slider" name="dayquantity" oninput="slide(this.value)">
                     7+ days
+                    <br>
+                    <div class="sliderValue" id="sliderValue"></div>
                 </td>
             </tr>
 
@@ -319,12 +325,12 @@
         </table>
     </form>
     <!--footer-->
- <footer> 
-    <p>Big Health Medical</p>
-    <p>PO BOX 22222</p>
-    <p>Houston TX 22222</p>
-    <button type="button" onclick="window.open('https://www.instagram.com');">Contact Us</button>
-</footer>
+    <footer>
+        <p>Big Health Medical</p>
+        <p>PO BOX 22222</p>
+        <p>Houston TX 22222</p>
+        <button type="button" onclick="window.open('https://www.instagram.com');">Contact Us</button>
+    </footer>
 
     <script src="homework1.js"></script>
 

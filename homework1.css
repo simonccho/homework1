@@ -1,5 +1,5 @@
 * {
-    font-family: "Poppins", sans-serif;
+    font-family: "Fira Sans", sans-serif;
     margin: 0;
 }
 
@@ -9,20 +9,71 @@ body {
     color: black;
 }
 
+input,
 select {
-    width: 13.5em;
+    font-size: medium;
+    border-radius: 0.3rem;
+    border: 1px solid grey;
 }
 
+#firstName,
+#lastName {
+    width: 11rem;
+}
+
+#middleInitial {
+    width: 2rem;
+}
+
+#city,
+#zip {
+    width: 12rem;
+}
+
+#state {
+    width: 12.4rem;
+}
+
+#email,
+#userID,
+#password,
+#passwordCheck,
+#addressLine1,
+#addressLine2,
+#ssn {
+    width: 25rem;
+}
+
+.rb {
+    margin-right: 1rem;
+}
+
+textarea {
+    max-width: 33rem;
+    border-radius: 0.3rem;
+    border: 1px solid grey;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 0.5rem;
+}
+
+input[type="range"] { 
+    width: 8em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.sliderValue {
+    margin-left: 4rem;
+}
 
 /*Header*/
-* {
-    font-family: "Trebuchet MS", monospace;
-}
 
 .topTable {
     width: 100%;
-    padding: 0.5em;
-    margin-bottom: 0em;
+    padding: 0.5rem;
 }
 
 .topper td {
@@ -45,54 +96,59 @@ select {
 /*form instructions*/
 .topPart {
     text-align: center;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 /*patient form*/
 .patientForm {
-    min-width: 30em;
+    min-width: 30rem;
     width: fit-content;
     margin: auto;
     background-color: rgb(166, 255, 185);
-    border-radius: 1em;
-    padding: 2em;
+    border-radius: 1rem;
+    padding: 2rem;
     box-shadow: 0 0 5px 0 rgba(71, 71, 71, 0.5);
-    margin-bottom: 5em;
+    margin-bottom: 5rem;
 }
 
 /*name*/
 .nameField {
     display: inline-block;
-    white-space: nowrap;
-    justify-content: space-between;
 }
 
 /*gender row*/
-.genderRow {
+.genderCol {
     display: inline-block;
-    white-space: nowrap;
-    justify-content: space-between;
 }
-
-.cityStateRow {
-    display: inline-block;
-    white-space: nowrap;
-    justify-content: space-between;
-}
-
 
 .endOfFormButtons {
     text-align: center;
-    padding-top: 2em;
+    padding-top: 2rem;
 }
 
 footer {
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
 }
 
 .thankyousubmission {
     text-align: center;
-    margin-bottom: 3em;
+    margin-bottom: 3rem;
+}
+
+button:hover,
+#submit:hover,
+#clear:hover {
+    transition: 0.3s ease-in-out;
+    background-color: grey;
+}
+
+button,
+#submit,
+#clear {
+    font-size: medium;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    margin: 0.3rem;
 }
