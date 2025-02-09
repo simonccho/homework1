@@ -149,9 +149,21 @@
                 <td>
                     <input type="text" id="addressLine2" name="Address Line 2" size="51" minlength="2" maxlength="30"
                         title="Enter address line 2 correctly" placeholder="Address line 2">
+                </td>
             </tr>
-            </td>
-            <br>
+
+            <!--phone number-->
+            <tr>
+                <td>
+                    <label class="phone" for="phone">Phone Number:</label>
+                </td>
+                <td>
+                    <input type="text" id="phone" name="phone" size="51" maxlength="12"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Enter a valid phone number" placeholder="XXX-XXX-XXXX"
+                        required>
+                </td>
+            </tr>
+
             <!--SSN-->
             <tr>
                 <td>
@@ -245,7 +257,7 @@
                     <label class="ZIP code" for="zip">ZIP code:</label>
                 </td>
                 <td>
-                    <input type="tel" id="zip" name="ZIP code" size="25" minlength="5" maxlength="10"
+                    <input type="text" id="zip" name="ZIP code" size="25" minlength="5" maxlength="10"
                         pattern="^[0-9]{5}(?:-[0-9]{4})?$" title="5 Digit Zip/Postal Code is required"
                         placeholder="XXXXX" required>
                 </td>
@@ -261,9 +273,9 @@
             <tr>
                 <td colspan="3">
                     <p>Is this your first time visiting this clinic?</p>
-                    <input type="radio" name="yesNo1" id="Yes1" value="Yes">
+                    <input type="radio" name="firstTime" id="Yes1" value="Yes">
                     <label class="rb" for="Yes1">Yes</label>
-                    <input type="radio" name="yesNo1" id="No1" value="No">
+                    <input type="radio" name="firstTime" id="No1" value="No">
                     <label class="rb" for="No1">No</label>
                 </td>
             </tr>
@@ -272,9 +284,9 @@
             <tr>
                 <td colspan="3">
                     <p>Are you currently taking any prescribed medication?</p>
-                    <input type="radio" name="yesNo2" id="Yes2" value="Yes">
+                    <input type="radio" name="prescriptions" id="Yes2" value="Yes">
                     <label class="rb" for="Yes2">Yes</label>
-                    <input type="radio" name="yesNo2" id="No2" value="No">
+                    <input type="radio" name="prescriptions" id="No2" value="No">
                     <label class="rb" for="No2">No</label>
                 </td>
             </tr>
@@ -283,19 +295,19 @@
             <tr>
                 <td colspan="3">
                     <p>How did you hear about Big Health Medical?:</p>
-                    <input type="checkbox" name="checkbox1" id="checkbox1" value="Option 1">
+                    <input type="checkbox" name="refInsurance" id="checkbox1" value="Option 1">
                     <label for="checkbox1">Insurance</label>
                     <br>
-                    <input type="checkbox" name="checkbox2" id="checkbox2" value="Option 2">
+                    <input type="checkbox" name="refFamily" id="checkbox2" value="Option 2">
                     <label for="checkbox2">Family Member</label>
                     <br>
-                    <input type="checkbox" name="checkbox3" id="checkbox3" value="Option 3">
+                    <input type="checkbox" name="refFriend" id="checkbox3" value="Option 3">
                     <label for="checkbox3">Friend</label>
                     <br>
-                    <input type="checkbox" name="checkbox4" id="checkbox4" value="Option 4">
+                    <input type="checkbox" name="refAd" id="checkbox4" value="Option 4">
                     <label for="checkbox4">Online Ad</label>
                     <br>
-                    <input type="checkbox" name="checkbox5" id="checkbox5" value="Option 5">
+                    <input type="checkbox" name="refOther" id="checkbox5" value="Option 5">
                     <label for="checkbox5">Other</label>
                     <br>
                 </td>
@@ -306,10 +318,22 @@
                 <td colspan="3">
                     <p>How long has the issue persisted?:</p>
                     1 Day
-                    <input type="range" min=1 max=100 step="1" class="slider" name="dayquantity" oninput="slide(this.value)">
+                    <input id="persistenceOfIssue" type="range" min=1 max=100 step="1" class="slider" name="dayquantity" oninput="slide(this.value)">
                     7+ days
                     <br>
                     <div class="sliderValue" id="sliderValue"></div>
+                </td>
+            </tr>
+
+            <!--Today's Date-->
+            <tr>
+                <td colspan="3">
+                    <label for="appointmentDate">Appointment Date:</label>
+                    <br>
+                    <input 
+                    type="date"
+                    id="appointmentDate"  
+                    name="Date of Appointment">
                 </td>
             </tr>
 

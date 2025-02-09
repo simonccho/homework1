@@ -40,7 +40,8 @@ select {
 #passwordCheck,
 #addressLine1,
 #addressLine2,
-#ssn {
+#ssn,
+#phone {
     width: 25rem;
 }
 
